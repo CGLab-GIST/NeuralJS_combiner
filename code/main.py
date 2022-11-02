@@ -65,11 +65,9 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--trainDir", type=str, default='../data/train/input')
 parser.add_argument("--trainGtDir", type=str, default='../data/train/target')
 parser.add_argument("--trainBiasedDir", type=str, default='../data/train/biased')
-parser.add_argument("--testBiasedDir", type=str, default='../data/test/input/biased')
 parser.add_argument("--testDir", type=str, default='../data/test/input')
 parser.add_argument("--testGtDir", type=str, default='../data/test/target')
-parser.add_argument("--testOutDir", type=str, default='../results/test_out/debug_shrinkage_factor')
-parser.add_argument("--validOutDir", type=str, default='../results/valid_out/0513_blendNet_denWgt_01_ks51/')
+parser.add_argument("--testOutDir", type=str, default='../results/test_out/')
 parser.add_argument("--checkPointDir", type=str, default='../results/pretrained_ckpt/')
 parser.add_argument("--input_feature_dim", type=int, default=INPUT_FEATS_DIM) # dest="noisy (3) + denosed (3) + albedo (3) + normal (3) + depth (1) + var (3)",
 parser.add_argument("--epochs", type=int, default=50)
@@ -242,8 +240,8 @@ if __name__ == "__main__":
             print("[TEST] load checkpoint at %d epoch"%args.loadEpoch)
 
             checkpoint.restore(checkpoint_path +"-" + str(args.loadEpoch))
-            SCENES=["curly-hair", "glass-of-water","veach-ajar", "staircase2"]
-            DENOISERS = ["afgsa"]
+            SCENES=["curly-hair", "glass-of-water","veach-ajar", "staircase2", "dragon-2"]
+            DENOISERS = ["kpcn","afgsa"]
             SPPS=["16","32","64","128","256","512", "1024", "2048"]
             for scene in SCENES: 
                 print(scene)
