@@ -57,8 +57,8 @@ for gpu in gpus:
 # Configuration
 KERNEL_SIZE         = 15
 KERNEL_SIZE_SQR     = KERNEL_SIZE * KERNEL_SIZE
-INPUT_FEATS_DIM     = 12
-DIM_FEAT            = 11 #13
+INPUT_FEATS_DIM     = 12 # noisy (3) + noisyVar (3) + olsA (3) + olsB (3)
+DIM_FEAT            = 11 # denoising (3) + albedo (3) + normal (3) + depth (1) + shadow (1)
 DIM_P               = (DIM_FEAT+1)
 
 parser = argparse.ArgumentParser()
@@ -69,7 +69,7 @@ parser.add_argument("--testDir", type=str, default='../data/test/input')
 parser.add_argument("--testGtDir", type=str, default='../data/test/target')
 parser.add_argument("--testOutDir", type=str, default='../results/test_out/')
 parser.add_argument("--checkPointDir", type=str, default='../results/pretrained_ckpt/')
-parser.add_argument("--input_feature_dim", type=int, default=INPUT_FEATS_DIM) # dest="noisy (3) + denosed (3) + albedo (3) + normal (3) + depth (1) + var (3)",
+parser.add_argument("--input_feature_dim", type=int, default=INPUT_FEATS_DIM) #
 parser.add_argument("--epochs", type=int, default=50)
 parser.add_argument("--batchSize", type=int, default=4)
 parser.add_argument("--patchSize", type=int, default=128)
@@ -78,8 +78,6 @@ parser.add_argument("--lr", type=float, default=1e-4)
 parser.add_argument("--kernelSize", type=int, default=KERNEL_SIZE)
 parser.add_argument("--olsKernelSize", type=int, default=51)
 parser.add_argument("--kernelSizeSqr", type=int, default=KERNEL_SIZE_SQR)
-parser.add_argument("--dimFeat", type=int, default=DIM_FEAT)
-parser.add_argument("--dimP", type=int, default=DIM_P)
 parser.add_argument("--retrain", action="store_true")
 parser.add_argument("--loadEpoch", type=int, default=50)
 #*********** TRAIN / TEST / VALIDATION *******************#
