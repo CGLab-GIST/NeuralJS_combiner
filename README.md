@@ -7,9 +7,9 @@
 ## Overview
 
 This code is the official implementation of SIGGRAPH Asia 2022 paper, [Neural James-Stein Combiner for Unbiased and Biased Renderings](https://cglab.gist.ac.kr/sa22neuraljs/).
-For more information, you can find the paper, supplementary report, interactive viewer in our website.
+You can find the paper, supplementary report, and interactive viewer for more information on our website.
 
-We have tested the code on Ubuntu 20.04 with NVIDIA GeForce RTX 3090 graphics card, and we have additionally checked that this code works well on the following graphics cards: NVIDIA Quadro RTX 8000.
+We have tested the code on Ubuntu 20.04 with NVIDIA GeForce RTX 3090 and Quadro RTX 8000 graphics cards.
 
 ## Requirements
 
@@ -33,7 +33,7 @@ In order to test using the provided codes and data, you can proceed in the follo
 1. Prepare the test scenes (you can download the test scenes [here](https://drive.google.com/file/d/1ucot5_m9c6_lQYYdd9sFCm0fE32yDZBC/view?usp=share_link)) and  please please check the default directories in `main.py`
 2. Download the pre-trained weights [here](https://drive.google.com/file/d/1YkXG-o6GducTJIGlfILtI_dOCaiKzIRr/view?usp=share_link) and unzip the downloaded checkpoints in `results` folder
 3. Please check the list of SCENES and SPPS in `main.py` 
-3. Run bellow command in terminal:
+3. Run the below command in the terminal:
 ```
 python main.py -m test 
 ```
