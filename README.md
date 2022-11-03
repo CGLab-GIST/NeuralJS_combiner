@@ -45,7 +45,7 @@ python main.py -m train
 ```
 
 ### Validation
-Note that we utilize the validation dataset for only retraining the previous works by following the official version of the codes (e.g., KPCN, AFGSA, DC and PD) and did not utilize the validation dataset for our method. We just took the checkpoints at final epochs. So, if you want to use the validation during the training, please make your own validation process.
+Note that we utilize the validation dataset for only retraining the previous works by following the official version of the codes (e.g., KPCN, AFGSA, DC, and PD) and did not utilize the validation dataset for training our method. We just used the checkpoints at the last epoch. So, if you want to use the validation during the training, please make your own validation process in provided codes.
  
 ### Build custom operators (CUDA) for Tensorflow 
 ```
