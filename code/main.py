@@ -249,6 +249,7 @@ if __name__ == "__main__":
                 gt = exr.read(os.path.join(args.testGtDir,scene+".exr"))
                 exr.write(os.path.join(outFolder,scene+'_gt.exr'),gt)
                 for denoiser in DENOISERS:
+                    print(denoiser)
                     for spp in SPPS:                       
                         currPath = os.path.join(args.testDir,scene,scene+"_"+spp)
                         biasedPath = os.path.join(args.testDir,scene, "biased", scene+"_"+spp)
