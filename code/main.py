@@ -232,7 +232,19 @@ if __name__ == "__main__":
                 if epoch % 1 == 0:
                     checkpoint.save(checkpoint_path)
 
+                """
+                 *** validation
+                 Note that we utilize the validation dataset for only retraining the previous works by following the official version of the codes (e.g., KPCN, AFGSA, DC, and PD) 
+                 and did not utilize the validation dataset for training our method. We just used the checkpoints at the last epoch. 
+                 So, if you want to use the validation during the training, 
+                 please make your own validation process here.
+                """
+                ###### start validation #####
+                # if args.valid:
 
+                ##### end validation #####
+
+                
 
         if args.mode == "test":
             print("[TEST] load checkpoint at %d epoch"%args.loadEpoch)
