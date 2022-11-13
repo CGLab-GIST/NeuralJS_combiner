@@ -30,7 +30,7 @@ Please use `run_docker.sh` to run it.
 
 In order to test using the provided codes and data, you can proceed in the following order:
 
-1. Prepare the test scenes (you can download the test scenes [here](https://drive.google.com/file/d/1ucot5_m9c6_lQYYdd9sFCm0fE32yDZBC/view?usp=share_link)) and  please please check the default directories in `main.py`
+1. Prepare the test scenes (you can download the test scenes [here](https://drive.google.com/file/d/1ucot5_m9c6_lQYYdd9sFCm0fE32yDZBC/view?usp=share_link)) and  please check the default directories in `main.py`
 2. Download the pre-trained weights [here](https://drive.google.com/file/d/1YkXG-o6GducTJIGlfILtI_dOCaiKzIRr/view?usp=share_link) and unzip the downloaded checkpoints in `results` folder
 3. Please check the list of SCENES and SPPS in `main.py` 
 3. Run the below command in the terminal:
