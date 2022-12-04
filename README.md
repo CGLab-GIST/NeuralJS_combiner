@@ -57,6 +57,24 @@ All source codes are released under a [BSD License](license).
 ## Citation
 
 ```
+@article{10.1145/3550454.3555496,
+author = {Gu, Jeongmin and Iglesias-Guitian, Jose A. and Moon, Bochang},
+title = {Neural James-Stein Combiner for Unbiased and Biased Renderings},
+year = {2022},
+issue_date = {December 2022},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {41},
+number = {6},
+issn = {0730-0301},
+url = {https://doi.org/10.1145/3550454.3555496},
+doi = {10.1145/3550454.3555496},
+journal = {ACM Trans. Graph.},
+month = {nov},
+articleno = {262},
+numpages = {14},
+keywords = {james-stein estimator, learning-based denoising, james-stein combiner, monte carlo rendering}
+}
 
 ```
 
